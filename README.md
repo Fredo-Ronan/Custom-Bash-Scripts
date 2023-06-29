@@ -5,3 +5,4 @@ OS : <img alt="Ubuntu" src="https://img.shields.io/badge/Ubuntu-B0A404?logo=ubun
 
 ### List of content
 * [XAMPP Start Command Bash Script](https://github.com/Fredo-Ronan/Custom-Bash-Scripts/blob/main/start-xampp.sh)
+* [Linux Install Flutter Bash Script](https://github.com/Fredo-Ronan/Custom-Bash-Scripts/blob/main/install_flutter_linux.sh)
