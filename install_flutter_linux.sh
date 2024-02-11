@@ -74,20 +74,37 @@ else
 fi
 
 # download and install android sdk using sdkmanager
+{
 xterm -e sdkmanager --list
 
 xterm -e sdkmanager "system-images;android-29;default;x86_64"
 xterm -e sdkmanager "platforms;android-29"
 xterm -e sdkmanager "platform-tools"
 xterm -e sdkmanager "build-tools;29.0.3"
+} || {
+source ~/.bashrc
+sdkmanager --list
+sdkmanager "system-images;android-29;default;x86_64"
+sdkmanager "platforms;android-29"
+sdkmanager "platforms-tools"
+sdkmanager "build-tools;29.0.3"
+}
 
 # accepting liceses for the android sdk
+{
 xterm -e sdkmanager --licenses
+} || {
+sdkmanager --licenses
+}
 
 # config the android sdk path for flutter
+{
 xterm -e flutter config --android-sdk ~/Android
-
 xterm -e flutter doctor -v
+} || {
+flutter config --android-sdk ~/Android
+flutter doctor -v
+}
 
 echo "Flutter installed successfully...."
 echo "Run 'flutter doctor' to check or 'flutter doctor -v' to get more detail info"
