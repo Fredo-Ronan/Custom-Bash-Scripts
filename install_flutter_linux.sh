@@ -13,6 +13,10 @@ sudo apt install git -y
 sudo apt update
 
 
+# Installing xterm for external terminal execution at the several commands at the bottom of this script 
+sudo apt install xterm -y
+
+
 # Prepare for the entire folder to hold the Android SDK and the Flutter
 cd ~
 mkdir Android
